@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+    <style>
+        h1{text-align: center;}
+        .slide_wrap {width: 1100px; overflow: hidden; margin: 0 auto;}
+        .slide_wrap .buttons{text-align: center; margin: 20px auto;}
+    </style>
+</head>
+<body>
+    <h1>Slideshow w3school</h1>
+    <div class="slide_wrap">
+        <img class="mySlides" src="images/coffee.jpg" alt="1">
+        <img class="mySlides" src="images/sound.jpg" alt="2">
+        <img class="mySlides" src="images/workbench.jpg" alt="3">
+        
+        <div class="buttons">
+            <button class="btn-black left" onclick="plusDivs(-1)">&#10094;<span>Prev</span></button>
+            <button class="btn-black right" onclick="plusDivs(1)"><span>Next</span>&#10095;</button>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n){
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n){
+            var i;
+            var x = document.getElementsByClassName('mySlides');
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++){
+                x[i].style.display = 'none';
+            }
+            x[slideIndex -1].style.display = 'block';
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+            var i = 0;
+            var alist = document.querySelectorAll('a');
+            
+            if (self.value === 'night'){
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+                
+                while (i < alist[i]){
+                    alist[i].style.color = 'orangered';
+                    i = i + 1;
+                }
+                
+            }else{
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+            }
+            
+        }
+    </script>
+</head>
+<body>
+	<h1><a href="">JavaScript</a></h1>
+	<h2>buttons change</h2>
+	<ol>
+	    <li><a href="">HTML</a></li>
+	    <li><a href="">CSS</a></li>
+	    <li><a href="">Java Script</a></li>
+	</ol>
+	
+	<input type="button" value="night" onclick="nightDayHandler(this)">
+	<input type="button" value="night" onclick="nightDayHandler(this)">
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sunt minima ipsum illum odio ea possimus maxime libero eum sit, ratione natus nesciunt. Quae, atque! Quisquam adipisci voluptas odit tenetur non aperiam assumenda laboriosam dolores excepturi asperiores atque fugiat ipsam autem totam sint cumque, vero aliquam voluptatum veritatis, laborum nesciunt, consectetur dicta consequuntur magnam. Nesciunt dolorem nulla dicta, impedit cumque necessitatibus minima modi maiores, saepe quidem voluptates rerum at voluptatibus odio vel. Autem odit sunt voluptate necessitatibus perferendis accusamus, illum recusandae sapiente dolores. Explicabo numquam saepe, voluptatem obcaecati, eaque culpa aspernatur maiores voluptatibus. Iure molestias laboriosam esse rem commodi quis natus, quisquam rerum tenetur pariatur alias nesciunt magni. Recusandae voluptate ut, eos tenetur sunt nemo rerum assumenda suscipit eligendi ipsam doloremque quaerat necessitatibus tempora quo aperiam quos ex possimus labore fugiat maiores incidunt. Eaque cumque ad aperiam odio debitis perspiciatis praesentium nobis, minima consequuntur officiis magni, est quas, consequatur nemo quia aliquam, molestiae iure soluta nesciunt quisquam. Nam molestias quae nihil. Illum nobis iure autem accusantium! Dolores qui cupiditate nesciunt repellendus hic impedit nisi labore accusantium commodi dignissimos, sint eveniet, ea ducimus dolore dicta quas aspernatur maxime incidunt non iste repellat. Ducimus similique, perferendis exercitationem id doloremque laudantium molestias dolores commodi dolore expedita fuga modi beatae esse animi explicabo quasi sunt eaque inventore totam quos, iure! Ut autem explicabo magni quam sit quos impedit laboriosam.</p>
+</body>
+</html>

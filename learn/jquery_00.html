@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        td,th{padding: 3px 8px;}
+    </style>
+</head>
+<body>
+    <h1>Jquery Learn</h1>
+    <h3>구글 CDN이용하기</h3>
+    <code><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></code>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="class1">Modi officiis temporibus, quae, tenetur necessitatibus, cumque maxime ipsum consequuntur nisi architecto placeat ducimus facilis quis odit a magnam provident, numquam asperiores aperiam iure nulla.</p>
+    <p id="id1">In veniam fugiat quia reiciendis voluptates aut explicabo earum est, sapiente consequuntur dignissimos vitae voluptatem, doloribus corporis!</p>
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>People</th>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>Park</td>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>Lee</td>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>yong</td>
+        </tr>
+    </table>
+    
+    <button class="hideall">Hide All</button>
+    <button class="hideclass">Hide Class</button>
+    <button class="hideid">Hide ID</button>
+    <button class="showall">Show All</button>
+    <button class="tableControl">Table#1</button>
+    
+    <script>
+        $(document).ready(function(){
+            $(".hideall").click(function(){
+                $("p").hide();
+            });
+            $(".hideclass").click(function(){
+                $(".class1").hide();
+            });
+            $(".hideid").click(function(){
+                $("#id1").hide();
+            });
+            $(".showall").click(function(){
+                $("p").show();
+            });
+            $("button").click(function(){
+                $(this).css("fontWeight","bold");
+            });
+            $(".tableControl").click(function(){
+                $("tr:even").css("backgroundColor","powderblue");
+            })
+            
+        });
+    </script>
+</body>
+</html>

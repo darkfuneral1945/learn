@@ -1,0 +1,7 @@
+.testbox{
+    padding: 4em;
+    box-shadow: 15px 0 0 rgba(0,0,0,0.15);
+    
+    li{list-style: none;}
+    p{color:powderblue;}
+}

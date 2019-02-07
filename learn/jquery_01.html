@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/test.css">
+    <style>
+        td,th{padding: 3px 8px;}
+    </style>
+</head>
+<body>
+    <h1>Jquery Learn</h1>
+    <h3>구글 CDN이용하기</h3>
+    <code><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></code>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="class1">Modi officiis temporibus, quae, tenetur necessitatibus, cumque maxime ipsum consequuntur nisi architecto placeat ducimus facilis quis odit a magnam provident, numquam asperiores aperiam iure nulla.</p>
+    <p id="id1">In veniam fugiat quia reiciendis voluptates aut explicabo earum est, sapiente consequuntur dignissimos vitae voluptatem, doloribus corporis!</p>
+    
+    <h3>테이블</h3>
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>People</th>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>Park</td>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>Lee</td>
+        </tr>
+        <tr>
+            <td>Doto</td>
+            <td>yong</td>
+        </tr>
+    </table>
+    
+    <h3>버튼들</h3>
+    <button class="class1">class1</button>
+    <button class="class2">class2 - hide</button>
+    <button class="class3">class3 - show</button>
+    <button class="class4">class4</button>
+    <button class="class5">class5</button>
+<!--    다잊어버렸네.-->
+    <script>
+        $(document).ready(function(){
+            $("button.class1").click(function(){
+                $("p.class1").text("Amazing text change!");
+            });
+            $("button.class2").click(function(){
+                $("table").hide(1000);
+            });
+            $("button.class3").click(function(){
+                $("table").show(100);
+            });
+        });
+    </script>
+</body>
+</html>

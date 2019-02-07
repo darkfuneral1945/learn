@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/test.css">
+    <style>
+        .wrap{
+            width: 50%;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        button{
+            border: 0;
+            display: block;
+            background: #666;
+            color: white;
+            font-size: 2.25em;
+            text-align: center;
+            width: 100%;
+            padding: 1em;
+            cursor: pointer;
+        }
+        .contents{
+            background-color: #333;
+            color: lightgray;
+            font-size: 0.8em;
+            text-align: center;
+            padding: 4em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery Learn</h1>
+    <h3>Effects - Fade in</h3>
+    <div class="wrap">
+        <button class="slide">Click to slide panel</button>
+        <div class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores fugiat eos accusamus qui, repellat aliquam labore nulla accusantium dicta hic, vero porro, cupiditate quidem suscipit tenetur placeat aspernatur, commodi temporibus. Beatae officiis repudiandae fugiat est et aliquam assumenda id consequuntur nesciunt libero, ipsa corporis iste, sed nisi sit cum adipisci.</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nemo consectetur repudiandae iusto minus quam reprehenderit earum adipisci, dolorum repellendus ut totam consequuntur pariatur enim asperiores, eius eveniet laborum maiores doloribus eos praesentium! Delectus maiores esse, nostrum non eos doloremque qui expedita dolor. Repudiandae perspiciatis, asperiores quas, esse commodi mollitia. Expedita nam numquam commodi quas deserunt magnam quo maiores libero corporis temporibus accusamus tempore sint et non blanditiis enim facere fuga cumque incidunt laudantium ipsam cupiditate, officia esse consequuntur. Suscipit labore possimus, repudiandae minus error alias velit doloremque fugit exercitationem mollitia maiores obcaecati dolorum voluptatem rerum cupiditate porro. In, provident?</p>
+    </div>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $(".contents").slideToggle(400);
+            });
+        });
+    </script>
+</body>
+</html>

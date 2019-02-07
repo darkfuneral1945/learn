@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/test.css">
+    <style>
+        .box{
+            padding: 1em 3em;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color:rgba(244, 66, 89);
+            color: white;
+            position: absolute;
+            
+        }
+        h3{
+            margin-top: 3em;
+        }
+        .boxToggle{
+            width: 100px; height: 100px;
+            background-color: yellowgreen;
+            text-align: center;
+        }
+        .keyframeBox{
+            width: 100px; height: 100px;
+            background-color: aquamarine;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery Learn</h1>
+    <h3>Animation</h3>
+    <button class="ani">Action</button>
+    <div class="box">Animate box</div>
+    
+    <h3>Slide toggle</h3>
+    <button class="aniToggle">ani toggle</button>
+    <div class="boxToggle">animate toggle</div>
+       
+    <h3>Key frame animation</h3>
+    <button class="keybtn">Key Action</button>
+    <button class="stop">Stop</button>
+    <div class="keyframeBox">Key box</div>
+        
+    <script>
+        $(document).ready(function(){
+            $("button.ani").click(function(){
+                $(".box").animate({
+                    left: '350px',
+                    backgroundColor: 'rgba(196, 33, 54)',
+                    width:'+=150px',
+                    height:'+=150px'
+                },300);
+            });
+            $(".aniToggle").click(function(){
+                $(".boxToggle").animate({height:'toggle'});
+            });
+            $(".keybtn").click(function(){
+                $(".keyframeBox")
+                .animate({height:'300px', opacity:'0.4'},600)
+                .animate({width:'300px', opacity:'0.8'},600)
+                .animate({height:'100px', opacity:'0.4'},600)
+                .animate({width:'100px', opacity:'0.8'},600)
+            });
+            $(".stop").click(function(){
+                $(".keyframeBox").clearQue().stop();
+            });
+        });
+    </script>
+</body>
+</html>
