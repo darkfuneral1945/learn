@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+    <style>
+        h1{text-align: center;}
+        .slide.container .mySlides{display: none;}
+        .navCircle{display: inline-block; width: 13px; height: 13px; padding: 0; border: 1px solid orangered;}
+        .slideActive{background-color: orangered;}
+    </style>
+</head>
+<body>
+    <h1>Slideshow w3school</h1>
+    <p>w3school 튜트리얼 슬라이드 제작</p>
+    <div class="slideWrap">
+        <div class="slide container">
+            <img class="mySlides" src="images/coffee.jpg" alt="1">
+            <img class="mySlides" src="images/sound.jpg" alt="2">
+            <img class="mySlides" src="images/workbench.jpg" alt="3">
+        </div>
+        <div class="buttons navigation">
+            <button onclick="plusDivs(-1)">&#10094;</button>
+            <button onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="circles navigation">
+            <span class="navCircle" onclick="currentDiv(1)"></span>
+            <span class="navCircle" onclick="currentDiv(2)"></span>
+            <span class="navCircle" onclick="currentDiv(3)"></span>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n){
+                showDivs(slideIndex += n);
+            }
+            
+            function currentDiv(n){
+                showDivs(slideIndex = n);
+            }
+            
+            function showDivs(n){
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("navCircle");
+                
+                if (n > x.length){slideIndex = 1}
+                if (n < 1){slideIndex = x.length}
+                for (i =0; i < x.length; i++){
+                    x[i].style.display = 'none';
+                }
+                for (i =0; i < dots.length; i++){
+                    dots[i].className = dots[i].className.replace("slideActive","");
+                }
+                x[slideIndex - 1].style.display = 'block';
+                dots[slideIndex -1].className += " slideActive";
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
